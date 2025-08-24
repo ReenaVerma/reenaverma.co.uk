@@ -1,14 +1,16 @@
 import './App.css';
+import ComputerText from "./components/ComputerText"
 
 function App() {
-  return (
-    <div className="App">
-      	<header className="App-header">
-			<h1>Reena Verma - Front-End Developer</h1>
-			<p>New website comming soon, as accidently deleted my old one. lol :p</p>
-      	</header>
-    </div>
-  	);
+	return (
+		<main className="background-animation">
+			<div className="content">
+				<h1>Reena Verma</h1>
+				<ComputerText></ComputerText>
+				<p>New website coming soon, I accidentally deleted my old one. lol :p</p>
+			</div>
+	  </main>
+	);
 }
 
 export default App;
