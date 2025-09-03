@@ -6,21 +6,19 @@ const name = "reena verma\nfront-end developer";
 function ComputerText() {
 	const [displayedName, setDisplayedName] = useState("");
 
-	const loopThroughText = (text, setText) => {
-		const chars 	= [...text]; //splits letters into array
+	useEffect(() => {
+		const chars 	= [...name];
 		const delay 	= 150;
 		let currentText = "";
 
-		for (let i = 0; i < chars.length; i++) {
-			setTimeout(() => {
-				currentText += chars[i];
-				setText(currentText);
-			}, delay * i);
+		function updateText(i) {
+			currentText += chars[i];
+			setDisplayedName(currentText);
 		};
-	};
 
-	useEffect(() => {
-		loopThroughText(name, setDisplayedName);
+		for (let i = 0; i < chars.length; i++) {
+			setTimeout(() => updateText(i), delay * i);
+		};
 	}, []);
 
     return (
