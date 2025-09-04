@@ -15,6 +15,7 @@ function App() {
 				<AboutText />
 				<code>{"</>"}</code>
 				<Skills />
+				<code>{"</>"}</code>
 			</main>
 		</>
 	);
