@@ -1,18 +1,20 @@
 import './App.scss';
 import ComputerText from "./components/ComputerText/ComputerText";
-import AboutText from "./components/AboutText/AboutText";
+import AboutText 	from "./components/AboutText/AboutText";
+import Skills 		from './components/Skills/Skills';
 
 function App() {
 	return (
 		<>
 			<header>
 				<div class="header__content">
-					<ComputerText></ComputerText>
+					<ComputerText />
 				</div>
 			</header>
 			<main>
-				<AboutText></AboutText>
+				<AboutText />
 				<code>{"</>"}</code>
+				<Skills />
 			</main>
 		</>
 	);
