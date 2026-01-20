@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import './ComputerText.scss';
+import './Header.scss';
 
-const name = "reena verma\nfront-end developer";
+const titleName = "Hello... I'm Reena Verma (^-^*)";
 
 function ComputerText() {
 	const [displayedName, setDisplayedName] = useState("");
 
 	useEffect(() => {
-		const chars 	= [...name];
-		const delay 	= 150;
+		const chars 	= [...titleName];
+		const delay 	= 300;
 		let currentText = "";
 
 		function updateText(i) {
@@ -24,6 +24,9 @@ function ComputerText() {
     return (
 		<div className="typewriter">
 			<h1>{displayedName}<span className="typewriter__cursor" aria-hidden="true">_</span></h1>
+			<h2>front-end developer</h2>
+			<h3>javascript teacher</h3>
+			<p><em>website is a work in progress. please ignore the temporary hideousness.</em></p>
 		</div>
     );
 };

@@ -1,5 +1,6 @@
 import './App.scss';
-import ComputerText from "./components/ComputerText/ComputerText";
+import Header from "./components/Header/Header";
+import Navigation   from "./components/Navigation/Navigation";
 import AboutText 	from "./components/AboutText/AboutText";
 import Skills 		from './components/Skills/Skills';
 
@@ -8,14 +9,15 @@ function App() {
 		<>
 			<header>
 				<div class="header__content">
-					<ComputerText />
+					<Header />
 				</div>
 			</header>
+			<Navigation />
 			<main>
 				<AboutText />
-				<code>{"</>"}</code>
+				<hr />
 				<Skills />
-				<code>{"</>"}</code>
+				<hr />
 			</main>
 		</>
 	);
