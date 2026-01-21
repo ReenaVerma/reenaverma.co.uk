@@ -8,7 +8,7 @@ function ComputerText() {
 
 	useEffect(() => {
 		const chars 	= [...titleName];
-		const delay 	= 300;
+		const delay 	= 100;
 		let currentText = "";
 
 		function updateText(i) {
@@ -21,13 +21,16 @@ function ComputerText() {
 		};
 	}, []);
 
+
     return (
+		<>
 		<div className="typewriter">
 			<h1>{displayedName}<span className="typewriter__cursor" aria-hidden="true">_</span></h1>
-			<h2>front-end developer</h2>
-			<h3>javascript teacher</h3>
+			<h2 className="line l2">front-end developer</h2>
+			<h3 className="line l3">javascript teacher</h3>
 			<p><em>website is a work in progress. please ignore the temporary hideousness.</em></p>
 		</div>
+		</>
     );
 };
 

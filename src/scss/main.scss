@@ -1,0 +1,95 @@
+@use './abstracts/variables';
+@use './abstracts/mixins';
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300i,400|Share+Tech+Mono");
+
+
+body {
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+header {
+    position: relative;
+    background-color: rgb(15, 17, 19);
+    margin-top: 50px;
+    padding: 20px 100px;
+    height: 50vh;
+
+    @media (max-width: 669px) {
+        height: fit-content;
+        padding: 20px 20px;
+    }
+}
+
+
+
+.header {
+    &__content {
+        // height: 300px;
+        padding-top: 20px;
+        @include mixins.default-container-width();
+        // border: 1px solid white;
+    }
+}
+
+main {
+    @include mixins.default-container-width();
+
+    @media (max-width: 669px) {
+        padding: 0 20px;
+    }
+}
+
+section {
+    margin-top: 10px;
+
+    a {
+        color: #3B82F6;
+        text-decoration: none;
+
+       &:hover {
+            color: #3B82F6;
+            text-decoration: underline;
+        }
+    }
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 40px;
+    color: #aaa;
+}
+
+h4 {
+    font-size: 20px;
+
+    @media (max-width: 669px) {
+        margin-top: 0px;
+    }
+}
+
+p {
+    line-height: 1.4;
+    color: #666;
+}
+
+code {
+    font-size: 35px;
+    margin: 0 auto;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e4e4e4;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
